@@ -1,0 +1,38 @@
+﻿@page
+@model Elevacity.Applications.EventOrdering.Pages.Ordering.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Event Ordering</h2>
+
+<div class="row">
+    <div class="col-md-8">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="OrderEvent.CreditCardModel.CreditCardNumber" class="control-label"></label>
+                <input asp-for="OrderEvent.CreditCardModel.CreditCardNumber" class="form-control" />
+                <span asp-validation-for="OrderEvent.CreditCardModel.CreditCardNumber" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-push-12">
+                <button type="button" class="btn btn-info">Cancel</button>
+                <input type="submit" value="Create Order" class="btn btn-default" />
+            </div>
+
+
+        </form>
+
+    </div>
+</div>
+@*<div class="row">
+    <div class="col-md-pull-12">
+        <button type="button" class="btn btn-info">Cancel</button>
+        <input type="submit" value="Create Order" class="btn btn-default" />
+    </div>
+</div>*@
+
+
+
